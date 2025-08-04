@@ -9,7 +9,7 @@ import {
 import { SignedOut } from "@clerk/nextjs";
 import {featuredCars} from "@/lib/data";
 import  CarCard from "@/components/car-card";
-import HomeSearch from "@/components/home-search";
+import {HomeSearch} from "@/components/home-search";
 import Link from "next/link";
 import Image from "next/image";
 import { bodyTypes, carMakes, faqItems } from "@/lib/data";
