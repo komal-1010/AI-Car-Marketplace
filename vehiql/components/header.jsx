@@ -4,9 +4,12 @@ import { Heart, CarFront, Layout, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
+import { checkUser } from "@/lib/checkUser";
 
 const Header = async ({ isAdminPage = false }) => {
-  const isAdmin = false
+  const User=await checkUser();
+  console.log("user",User)
+  const isAdmin = User?.role=='ADMIN'
 
   return (
     <header className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b">
